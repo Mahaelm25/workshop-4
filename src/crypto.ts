@@ -1,9 +1,5 @@
 import { webcrypto } from "crypto";
 
-// #############
-// ### Utils ###
-// #############
-
 // Function to convert ArrayBuffer to Base64 string
 function arrayBufferToBase64(buffer: ArrayBuffer): string {
   return Buffer.from(buffer).toString("base64");
@@ -15,9 +11,6 @@ function base64ToArrayBuffer(base64: string): ArrayBuffer {
   return buff.buffer.slice(buff.byteOffset, buff.byteOffset + buff.byteLength);
 }
 
-// ################
-// ### RSA keys ###
-// ################
 
 // Generates a pair of private / public RSA keys
 type GenerateRsaKeyPair = {
@@ -25,19 +18,13 @@ type GenerateRsaKeyPair = {
   privateKey: webcrypto.CryptoKey;
 };
 export async function generateRsaKeyPair(): Promise<GenerateRsaKeyPair> {
-  // TODO implement this function using the crypto package to generate a public and private RSA key pair.
-  //      the public key should be used for encryption and the private key for decryption. Make sure the
-  //      keys are extractable.
 
-  // remove this
   return { publicKey: {} as any, privateKey: {} as any };
 }
 
 // Export a crypto public key to a base64 string format
 export async function exportPubKey(key: webcrypto.CryptoKey): Promise<string> {
-  // TODO implement this function to return a base64 string version of a public key
-
-  // remove this
+  
   return "";
 }
 
@@ -65,9 +52,7 @@ export async function importPubKey(
 export async function importPrvKey(
   strKey: string
 ): Promise<webcrypto.CryptoKey> {
-  // TODO implement this function to go back from the result of the exportPrvKey function to it's native crypto key object
-
-  // remove this
+  
   return {} as any;
 }
 
@@ -76,10 +61,7 @@ export async function rsaEncrypt(
   b64Data: string,
   strPublicKey: string
 ): Promise<string> {
-  // TODO implement this function to encrypt a base64 encoded message with a public key
-  // tip: use the provided base64ToArrayBuffer function
-
-  // remove this
+ 
   return "";
 }
 
@@ -101,19 +83,13 @@ export async function rsaDecrypt(
 
 // Generates a random symmetric key
 export async function createRandomSymmetricKey(): Promise<webcrypto.CryptoKey> {
-  // TODO implement this function using the crypto package to generate a symmetric key.
-  //      the key should be used for both encryption and decryption. Make sure the
-  //      keys are extractable.
 
-  // remove this
   return {} as any;
 }
 
 // Export a crypto symmetric key to a base64 string format
 export async function exportSymKey(key: webcrypto.CryptoKey): Promise<string> {
-  // TODO implement this function to return a base64 string version of a symmetric key
 
-  // remove this
   return "";
 }
 
@@ -121,9 +97,7 @@ export async function exportSymKey(key: webcrypto.CryptoKey): Promise<string> {
 export async function importSymKey(
   strKey: string
 ): Promise<webcrypto.CryptoKey> {
-  // TODO implement this function to go back from the result of the exportSymKey function to it's native crypto key object
 
-  // remove this
   return {} as any;
 }
 
